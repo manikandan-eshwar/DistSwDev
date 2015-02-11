@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardinalsHBS</name>
+    </assembly>
+    <members>
+        <member name="M:CardinalsHBS.BankService.generatecardno(System.String)">
+            <summary>
+            the method generates a credit card number for the travel agency parameter
+            if the travelagency has an account it will return the account number else 
+            a new number is generated
+            </summary>
+            <param name="TAname"></param>
+            <returns>credit card no as string</returns>
+        </member>
+        <member name="M:CardinalsHBS.BankService.EncryptCardNo(System.String)">
+            <summary>
+            This method returns the encrypted card no.
+            </summary>
+            <param name="TAname"></param>
+            <returns>encrypted credit card no.</returns>
+        </member>
+        <member name="M:CardinalsHBS.BankService.verifyaccount(System.String,System.String)">
+            <summary>
+            method to check if the credit card no of the travel agency TAname is valid
+            </summary>
+            <param name="TAname"></param>
+            <param name="encryptedcno"></param>
+            <returns>true or false</returns>
+        </member>
+        <member name="T:CardinalsHBS.CardinalMain">
+            <summary>
+            Main Class Driving the application of Hotel Blocking System
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.CardinalMain.Main(System.String[])">
+            <summary>
+            Main Method for starting the application
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:CardinalsHBS.CardinalMain.startOrders(System.Int32)">
+            <summary>
+            This method starts the threads for placing orders after a price cut event
+            </summary>
+            <param name="i">Input Paramter that determines in which HotelSupplier the Price Cut Event Occurred</param>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.changePrice(System.Int32,System.String)">
+            <summary>
+            This method generates an event based on the previous price of the hotel room
+            </summary>
+            <param name="price">New Price</param>
+            <param name="HotelName">Hotel Supplier Name</param>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.InvokePricingModel">
+            <summary>
+            Pricing Model which determines price randomly .. Sometimes it goes high and sometimes it goes low.
+            Change Price method is called with the new price.
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.receiveOrder">
+            <summary>
+            This method receives the order placed by the travel agencies. The orders are read from the multi-cell
+            buffer
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.Decoder(System.String)">
+            <summary>
+            Decodes the Order Information String and re-constructs it into a object of type Order Class
+            </summary>
+            <param name="CurrentOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.getRoomsAvailable(System.String)">
+            <summary>
+             Based on the hotel name rooms available is returned
+            </summary>
+            <param name="HotelName">Hotel Name</param>
+            <returns>No of Rooms Available</returns>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.getRoomPrice(System.String)">
+            <summary>
+            Based on the Hotel Name room price is returned
+            </summary>
+            <param name="HotelName">Hotel Name</param>
+            <returns>Room Price of the hotel</returns>
+        </member>
+        <member name="M:CardinalsHBS.HotelSupplier.processOrder">
+            <summary>
+            Once the Hotel Supplier Receives the Order process order is called for processing the order
+            and sends back the result to the travel agency 
+            </summary>
+        </member>
+        <member name="T:CardinalsHBS.MultiCellBuffer">
+            <summary>
+            The instances of this class is used as a buffer for placing, receiving and confirming order.
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.MultiCellBuffer.setOneCell(System.String)">
+            <summary>
+            Setter for Buffer cell with Order Information in String Format
+            </summary>
+            <param name="OneCell">Order Information in string format</param>
+        </member>
+        <member name="M:CardinalsHBS.MultiCellBuffer.getOneCell">
+            <summary>
+            Getter for Buffer CEll with order information in string format
+            </summary>
+            <returns>order information in string format</returns>
+        </member>
+        <member name="T:CardinalsHBS.OrderClass">
+            <summary>
+            This is a Plain C# class whose instances carry information of one single order.
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.setCardNo(System.String)">
+            <summary>
+            Setter for Credit Card No.
+            </summary>
+            <param name="CardNo">Card Number</param>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.getCardNo">
+            <summary>
+            Getter for Credit Card No.
+            </summary>
+            <returns>Credit Card Number in String Format</returns>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.setSenderID(System.String)">
+            <summary>
+            Setter for Travel Agency Name
+            </summary>
+            <param name="SenderID">Travel Agency Name</param>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.getSenderID">
+            <summary>
+            Getter for Travel Agency Name
+            </summary>
+            <returns>Travel Agency Name</returns>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.setReceieverID(System.String)">
+            <summary>
+            Setter for Hotel Supplier Name
+            </summary>
+            <param name="ReceiverID">Hotel Supplier Name</param>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.getReceiverID">
+            <summary>
+            Getter for Hotel Supplier Name
+            </summary>
+            <returns>Hotel Supplier Name</returns>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.setNoOfRooms(System.Int32)">
+            <summary>
+            Setter for No. of rooms
+            </summary>
+            <param name="NoOfRooms">No. of Rooms required to book</param>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.getNoOfRooms">
+            <summary>
+            Getter for No. of Rooms
+            </summary>
+            <returns>No. of Rooms to book</returns>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.setNoOfDays(System.Int32)">
+            <summary>
+            Setter for No. of Days
+            </summary>
+            <param name="NoOfDays">No of Days to book rooms</param>
+        </member>
+        <member name="M:CardinalsHBS.OrderClass.getNoOfDays">
+            <summary>
+            Getter for No. of Days
+            </summary>
+            <returns>No. of Days for which rooms are to be booked</returns>
+        </member>
+        <member name="T:CardinalsHBS.TravelAgency">
+            <summary>
+            Travel agency performs call back handling in the event of price cut and places order appropriately
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.setCurrentOrder(CardinalsHBS.OrderClass)">
+            <summary>
+            Setter for  Order Object
+            </summary>
+            <param name="CurrentOrder"></param>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.getCurrentOrder">
+            <summary>
+            Getter for Order Object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.Encoder(CardinalsHBS.OrderClass)">
+            <summary>
+            Encoder Method for Coverting Order Object to String 
+            </summary>
+            <param name="CurrentOrder">Instance of Order Object</param>
+            <returns>String with order information separated by '-'</returns>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.RoomsPriceCut(System.Int32,System.String)">
+            <summary>
+            Call back Handler method which handles the priceCut Event based
+            </summary>
+            <param name="price">New Low price of the respective hotel</param>
+            <param name="HotelName"></param>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.placeOrder">
+            <summary>
+            This method writes the order object to multi-cell buffer from where hotel supplier reads the order object
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.receiveOrderConfirmation">
+            <summary>
+            This method is used to receive the order status and print it
+            </summary>
+        </member>
+        <member name="M:CardinalsHBS.TravelAgency.calculateNoOfRooms(System.Int32)">
+            <summary>
+            Calcualtes No. of Rooms to book based on Hotel Price
+            </summary>
+            <param name="price">New Low Price</param>
+            <returns>No of rooms to book</returns>
+        </member>
+        <member name="T:CardinalsHBS.CardEncryptionService.Service">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.Encrypt(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.EncryptAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.EncryptAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.Decrypt(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.DecryptAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.DecryptAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:CardinalsHBS.CardEncryptionService.Service.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:CardinalsHBS.CardEncryptionService.Service.EncryptCompleted">
+            <remarks/>
+        </member>
+        <member name="E:CardinalsHBS.CardEncryptionService.Service.DecryptCompleted">
+            <remarks/>
+        </member>
+        <member name="T:CardinalsHBS.CardEncryptionService.EncryptCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:CardinalsHBS.CardEncryptionService.EncryptCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:CardinalsHBS.CardEncryptionService.EncryptCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:CardinalsHBS.CardEncryptionService.DecryptCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:CardinalsHBS.CardEncryptionService.DecryptCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:CardinalsHBS.CardEncryptionService.DecryptCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

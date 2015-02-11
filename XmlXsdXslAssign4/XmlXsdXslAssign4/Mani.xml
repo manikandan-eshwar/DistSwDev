@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Hotels>
+  <Hotel Stars="***">
+    <Name>Udipi Cafe</Name>
+    <Contact>
+      <Phone>4809948787</Phone>
+      <Email></Email>
+    </Contact>
+    <Address BusLines="Orbit:Earth Metro:72">
+      <Number>1636</Number>
+      <Street>N. Scottsdale Road</Street>
+      <City>Tempe</City>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+</Hotels>

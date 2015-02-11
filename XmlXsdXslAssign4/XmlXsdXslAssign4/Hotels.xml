@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.public.asu.edu/~mvellore/dsod/Hotels.xslt" ?>
+<Hotels>
+  <Hotel Stars="***">
+    <Name>Udipi Cafe</Name>
+    <Contact>
+      <Phone>4809948787</Phone>
+      <Email>admin@udipiaz.com</Email>
+    </Contact>
+    <Address BusLines="Orbit:Earth Metro:72"> 
+      <Number>1636</Number>
+      <Street>N. Scottsdale Road</Street>
+      <City>Tempe</City>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="*****">
+    <Name>Little Miss BBQ</Name>
+    <Contact>
+      <Phone>6024371177</Phone>
+      <Email>scott@littlemissbbq.com</Email>
+    </Contact>
+    <Address>
+      <Number>4301</Number>
+      <Street> E. University Dr.</Street>
+      <City>Phoenix</City>
+      <Zip>85034</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="*****">
+    <Name>Santos Lucha Libre</Name>
+    <Contact>
+      <Phone>6029431156</Phone>
+      <Email>santos@santos.com</Email>
+    </Contact>
+    <Address BusLines="Metro: LightRail WestBound">
+      <Number>9822</Number>
+      <Street> N 7th St Ste7</Street>
+      <City>Phoenix</City>
+      <Zip>85020</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="****">
+    <Name>Rusconi’s American Kitchen</Name>
+    <Contact>
+      <Phone>4804830009</Phone>
+      <Email>admin@rusconi.com</Email>
+    </Contact>
+    <Address BusLines="Metro: LightRail WestBound">
+      <Number>10637</Number>
+      <Street>N Tatum Blvd</Street>
+      <City>Phoenix</City>
+      <Zip>85028</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="***">
+    <Name>Bobby Q</Name>
+    <Contact>
+      <Phone>6029955982</Phone>
+      <Email>admin@bobbyq.com</Email>
+    </Contact>
+    <Address>
+      <Number>8501</Number>
+      <Street> N 27th Ave</Street>
+      <City>Phoenix</City>
+      <Zip>85051</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="**">
+    <Name>Desert Roots Kitchen</Name>
+    <Contact>
+      <Phone>4803820228</Phone>
+      <Email>admin@dessertR.com</Email>
+    </Contact>
+    <Address BusLines="Orbit:Mercury, Mars">
+      <Number>414</Number>
+      <Street>
+        S Mill Ave Ste 111
+    </Street>
+      <City>Tempe</City>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="***">
+    <Name>Hummus Xpress</Name>
+    <Contact>
+      <Phone>4809682311</Phone>
+      <Email>admin@hummus.com</Email>
+    </Contact>
+    <Address>
+      <Number>930</Number>
+      <Street>
+        W Broadway Rd Ste11
+      </Street>
+      <City>Tempe</City>
+      <Zip>85282</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="**">
+    <Name>Four Peaks Brewing Co</Name>
+    <Contact>
+      <Phone>4803039967</Phone>
+      <Email>admin@fourpeaks.com</Email>
+    </Contact>
+    <Address>
+      <Number>1340</Number>
+      <Street>
+         E 8th St
+      </Street>
+      <City>Tempe</City>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="***">
+    <Name>Haji-Baba</Name>
+    <Contact>
+      <Phone>4808941905</Phone>
+      <Email>admin@hajibaba.com</Email>
+    </Contact>
+    <Address>
+      <Number>1513</Number>
+      <Street>
+        E Apache Blvd
+      </Street>
+      <City>Tempe</City>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+  <Hotel Stars="***">
+    <Name>Nandhini Indian Cuisine</Name>
+    <Contact>
+      <Phone>4809675234</Phone>
+      <Email>admin@nandhini.com</Email>
+    </Contact>
+    <Address>
+      <Number>1845</Number>
+      <Street>
+        E Broadway Rd
+      </Street>
+      <City>Tempe</City>
+      <Zip>85282</Zip>
+    </Address>
+  </Hotel>
+</Hotels>

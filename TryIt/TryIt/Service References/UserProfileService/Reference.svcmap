@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b793ccb8-a7d9-491e-9d19-290219dcc0b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar20.fulton.asu.edu/page1/UserProfile.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserProfile.xsd" MetadataType="Schema" ID="f920763f-8aef-41f9-8ab2-eb33eb02b313" SourceId="1" SourceUrl="http://webstrar20.fulton.asu.edu/Page1/UserProfile.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserProfile.disco" MetadataType="Disco" ID="d12523bf-2be4-4fec-8f13-9a589af3ec69" SourceId="1" SourceUrl="http://webstrar20.fulton.asu.edu/Page1/UserProfile.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="438b0108-d68a-44fc-be83-26a5f252125a" SourceId="1" SourceUrl="http://webstrar20.fulton.asu.edu/Page1/UserProfile.svc?wsdl" />
+    <MetadataFile FileName="UserProfile1.xsd" MetadataType="Schema" ID="889aafd3-b3f2-4e47-9c2e-3a625f762728" SourceId="1" SourceUrl="http://webstrar20.fulton.asu.edu/Page1/UserProfile.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
